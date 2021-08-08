@@ -39,11 +39,14 @@ void loop() {
   }
   delay(10);
     
-    
+    //map(value, fromLow（現在の範囲の下限）, fromHigh（現在の範囲の上限）, toLow（変換後の範囲の下限）, toHigh（変換後の範囲の下限）)
     int val1 = map(sensorValue1, 0, 5000, 50, 4000); //sensorValue1で読み取った数値をtone用（周波数）に変換する
+    //int val1 = map(sensorValue1, 0, 1000, 50, 528); //変換する上限値や下限値を変更すると音が変わる
     int val2 = map(sensorValue2, 0, 10000, 10, 1000); //sensorValue2で読み取った数値をdelay用（音の長さ）に変換する
+    //int val2 = map(sensorValue2, 0, 5000, 50, 4000); //変換する上限値や下限値を変更すると音のなり方が変わる
 
-    tone(8,val1,10);//8pinで音を鳴らす
+    tone(8,val1,20);//tone(pin, 周波数, 音の持続時間)
+    //tone(8,val1,100);//tone(pin, 周波数, 音の持続時間)音の持続時間の値を変えると音のなりかたが変わる
     noTone;//パルスの停止
     delay(val2);
 }
