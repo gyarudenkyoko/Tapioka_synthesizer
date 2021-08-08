@@ -6,3 +6,5 @@ Arduino nano 互換機×１
 スピーカー×１
 LED×１
 電線
+
+https://fabcross.jp/category/make/20190823_jiyukenkyu.html
